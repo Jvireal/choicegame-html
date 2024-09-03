@@ -1,0 +1,123 @@
+body {
+    background-color: #000000;
+    color: white;
+    font-family: "Bai Jamjuree", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    transition: background-color 0.5s ease-in-out;
+}
+
+button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: "Bai Jamjuree", sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #c3a3ff;
+    transform: scale(1.1);
+}
+
+.passo {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.passo.ativo {
+    display: block;
+    opacity: 1;
+}
+
+main {
+    text-align: center;
+    max-width: 70%;
+    margin: 1 auto;
+}
+
+img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+.titulo-passo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.escolha-componente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.escolha-componente img {
+    max-width: 150px;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s forwards ease-in-out;
+}
+
+.escolha-componente label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.escolha-componente select {
+    padding: 5px;
+    width: 200px;
+    transition: background-color 0.3s;
+}
+
+.escolha-componente select:focus {
+    background-color: #c3a3ff;
+}
+
+.passo-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+    animation: fadeIn 1s forwards ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

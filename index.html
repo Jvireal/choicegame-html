@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jogo de escolhas em busca do PC gamer ideal. Tome decisões e descubra o melhor caminho para montar seu computador.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Em busca do PC Gamer</title>
+</head>
+<body>
+    <main>
+        <div class="passo ativo" id="passo-0">
+            <h1 class="titulo-passo">Em busca do PC Gamer</h1>
+            <img src="images/cenario-passo0.png" alt="Homem pensando em um computador">
+            <p>Você está muito cansado e sente que precisa de mais lazer, então você decide comprar um computador para jogar e esfriar a cabeça. Contudo, você nota que a sua situação financeira no momento não está favorável. Entretanto, você ainda pode começar a gerenciar o dinheiro agora. O que você vai fazer?</p>
+            <button class="btn-proximo" data-proximo="1">CORRER ATRÁS</button>
+            <button class="btn-proximo" data-proximo="2">ESPERAR</button>
+        </div>
+        
+        <div class="passo" id="passo-1">
+            <img src="images/cenario-passo1.png" alt="Peças de computador">
+            <p>Você decide correr atrás de conseguir um PC, apesar das dificuldades. Então cria planos para que a melhor escolha seja feita: Montar um computador do zero ou comprar pronto?</p>
+            <button class="btn-proximo" data-proximo="3">MONTAR DO ZERO</button>
+            <button class="btn-proximo" data-proximo="4">COMPRAR PRONTO</button>
+        </div>
+        
+        <div class="passo" id="passo-2">
+            <h1 class="titulo-passo">Final bom... daqui 3 anos</h1>
+            <img src="images/cenario-passo2.png" alt="Homem triste">
+            <p>Você decidiu esperar.</p>
+            <button class="btn-proximo" data-proximo="0">RECOMEÇAR</button>
+        </div>
+        
+        <div class="passo" id="passo-3">
+            <img src="images/cenario-passo3.png" alt="Cartão de crédito">
+            <p>Você decidiu montar seu computador peça por peça e se depara com várias marcas no mercado, algumas mais caras e outras mais baratas. Você vai precisar escolher cada peça e somar todas, encaixando dentro do orçamento disponível.</p>
+            <p>Orçamento disponível: R$2.500,00</p>
+            <button class="btn-proximo" data-proximo="5">COMEÇAR</button>
+        </div>
+        
+        <div class="passo" id="passo-4">
+            <h1 class="titulo-passo">Final ruiMnnn..........</h1>
+            <img src="images/cenario-passo4.png" alt="Tela azul erro">
+            <p>Você comprou um computador pré-montado, o qual veio com problemas de compatibilidade e peças de má qualidade.</p>
+            <button class="btn-proximo" data-proximo="0">RECOMEÇAR</button>
+        </div>
+        
+        <div class="passo" id="passo-5">
+            <h2>Escolha seus componentes:</h2>
+        
+            <div class="escolha-componente">
+                <img src="images/cenario-cpu.png" alt="CPU">
+                <label for="processador">Processador:</label>
+                <select id="processador">
+                    <option value="0">Selecione</option>
+                    <option value="1200">Intel i5 - R$1200</option>
+                    <option value="1500">Intel i7 - R$1500</option>
+                    <option value="1000">AMD Ryzen 5 - R$1000</option>
+                </select>
+            </div>
+        
+            <div class="escolha-componente">
+                <img src="images/cenario-gpu.png" alt="GPU">
+                <label for="gpu">Placa de Vídeo:</label>
+                <select id="gpu">
+                    <option value="0">Selecione</option>
+                    <option value="2000">NVIDIA RTX 3060 - R$2000</option>
+                    <option value="1500">NVIDIA GTX 1660 - R$1500</option>
+                    <option value="500">AMD RX 580 - R$500</option>
+                </select>
+            </div>
+        
+            <div class="escolha-componente">
+                <img src="images/cenario-ram.png" alt="RAM">
+                <label for="ram">Memória RAM:</label>
+                <select id="ram">
+                    <option value="0">Selecione</option>
+                    <option value="50">8GB DDR4 - R$50</option>
+                    <option value="200">16GB DDR4 - R$200</option>
+                    <option value="1000">32GB DDR4 - R$1000</option>
+                </select>
+            </div>
+
+            <button id="finalizar" class="btn-proximo" data-proximo="6">Finalizar Compra</button>
+        </div>
+        
+        <div class="passo" id="passo-6">
+            <div class="image-container">
+              <img id="imagem-dentro-orcamento" src="images/cenario-respeitado.png" alt="sucesso">
+              <img id="imagem-fora-orcamento" src="images/cenario-quebrado.png" alt="quebra">
+            </div>
+            <h2 id="resultado"></h2>
+            <button class="btn-proximo" data-proximo="7">AVANÇAR</button>
+          </div> 
+        
+        <div class="passo" id="passo-7">
+            <h1 id="titulofinal"></h1>
+            <div class="image-container">
+                <img id="imagem-final-bom" src="images/cenario-final-bom.png" alt="bom">
+                <img id="imagem-final-ruim" src="images/cenario-final-ruim.png" alt="ruim">
+            </div>
+            <h2 id="resultadofinal"></h2>
+            <button id="FIM" data-proximo="0">FIM</button>
+            <button id="again-yes" data-proximo="5">SIM</button>
+            <button id="again-no" data-proximo="0">NÃO</button>
+        </div>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
